@@ -1,0 +1,32 @@
+public class ArrayHelper {
+    public static void main(String[] args) {
+        int[] scores = {70, 80, 90};
+        System.out.println("最大值是: " + findMax(scores));
+    }
+
+    /**
+     * 找出陣列中的最大值
+     * @param arr 輸入的整數陣列
+     * @return 陣列中的最大值
+     */
+    public static int findMax(int[] arr) {
+        // 1. 檢查防呆：如果陣列為空，則拋出異常或回傳特定值
+        if (arr == null || arr.length == 0) {
+            throw new IllegalArgumentException("陣列不可為空");
+        }
+
+        // 2. 假設第一個元素就是目前看到的「最大值」
+        int max = arr[0];
+
+        // 3. 從第二個元素開始遍歷
+        for (int i = 1; i < arr.length; i++) {
+            // 4. 如果發現更大的數字，就更新 max
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+
+        // 5. 回傳結果
+        return max;
+    }
+}
