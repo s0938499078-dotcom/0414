@@ -1,0 +1,21 @@
+public class AverageScore {
+    public static void main(String[] args) {
+        // 1. 定義數組
+        int[] scores = {70, 80, 90};
+        
+        // 2. 定義變數來存儲總和
+        int sum = 0;
+        
+        // 3. 使用 for-each 迴圈計算總和
+        for (int score : scores) {
+            sum += score;
+        }
+        
+        // 4. 計算平均值 (將 sum 轉為 double 以保留小數點)
+        double average = (double) sum / scores.length;
+        
+        // 5. 印出結果
+        System.out.println("總分: " + sum);
+        System.out.println("平均分數: " + average);
+    }
+}
